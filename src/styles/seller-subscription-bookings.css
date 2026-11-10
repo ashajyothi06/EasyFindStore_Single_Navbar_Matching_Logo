@@ -1,0 +1,453 @@
+.subscription-bookings-page {
+  width: 100%;
+  padding: 40px 0 80px;
+  background: #f5f9f6;
+  color: #15251a;
+}
+
+.subscription-bookings-container {
+  width: 100%;
+  padding-left: clamp(18px, 4vw, 64px);
+  padding-right: clamp(18px, 4vw, 64px);
+}
+
+.subscription-bookings-heading,
+.subscription-bookings-toolbar,
+.subscription-delivery-card,
+.subscription-booking-panel {
+  border: 1px solid #d9e7dc;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 14px 38px rgba(24, 66, 39, 0.06);
+}
+
+.subscription-bookings-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 23px;
+}
+
+.subscription-bookings-eyebrow {
+  display: block;
+  margin-bottom: 6px;
+  color: #15834a;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.subscription-bookings-heading h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  letter-spacing: -0.04em;
+}
+
+.subscription-bookings-heading p {
+  max-width: 690px;
+  margin: 8px 0 0;
+  color: #64746a;
+  line-height: 1.55;
+}
+
+.subscription-bookings-link,
+.subscription-bookings-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 13px;
+  border: 1px solid #c9dece;
+  border-radius: 10px;
+  background: #fff;
+  color: #1f6338;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.subscription-bookings-button.active,
+.subscription-bookings-link.primary {
+  border-color: #159a58;
+  background: #159a58;
+  color: #fff;
+}
+
+.subscription-bookings-summary {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 11px;
+  margin: 16px 0;
+}
+
+.subscription-summary-card {
+  padding: 15px;
+  border: 1px solid #d8e7dc;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.subscription-summary-card span {
+  display: block;
+  color: #68776e;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.subscription-summary-card strong {
+  display: block;
+  margin-top: 5px;
+  color: #185c34;
+  font-size: 1.45rem;
+}
+
+.subscription-bookings-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 13px;
+  margin-bottom: 17px;
+  padding: 14px;
+}
+
+.subscription-bookings-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.subscription-date-filter {
+  display: grid;
+  gap: 4px;
+  color: #596b60;
+  font-size: 0.7rem;
+  font-weight: 850;
+}
+
+.subscription-date-filter input {
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #cadbce;
+  border-radius: 10px;
+  color: #173b25;
+  font: inherit;
+}
+
+.subscription-date-group {
+  margin-bottom: 19px;
+}
+
+.subscription-date-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 9px;
+  color: #274a33;
+}
+
+.subscription-date-heading h2 {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.subscription-date-heading span {
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #e9f7ed;
+  color: #17653a;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.subscription-delivery-list {
+  display: grid;
+  gap: 11px;
+}
+
+.subscription-delivery-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 15px;
+  padding: 17px;
+}
+
+.subscription-delivery-card.today {
+  border-color: #159a58;
+  box-shadow: 0 0 0 2px rgba(21, 154, 88, 0.12);
+}
+
+.subscription-delivery-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.subscription-delivery-title h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.subscription-status {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #edf4ef;
+  color: #365e42;
+  font-size: 0.66rem;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.subscription-delivery-meta {
+  margin: 7px 0;
+  color: #617168;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.subscription-prep-block {
+  display: grid;
+  gap: 5px;
+  margin-top: 9px;
+  padding: 10px;
+  border-radius: 11px;
+  background: #f4f9f5;
+  font-size: 0.76rem;
+}
+
+.subscription-prep-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.subscription-prep-row strong {
+  text-align: right;
+}
+
+.subscription-delivery-side {
+  display: grid;
+  align-content: start;
+  justify-items: end;
+  gap: 8px;
+  min-width: 125px;
+}
+
+.subscription-sequence {
+  color: #1b6a3d;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.subscription-bookings-notice,
+.subscription-bookings-empty,
+.subscription-bookings-loading {
+  padding: 18px;
+  border: 1px solid #d7e4da;
+  border-radius: 14px;
+  background: #fff;
+  color: #617168;
+  text-align: center;
+}
+
+.subscription-bookings-notice.error {
+  margin: 14px 0;
+  border-color: #f1c9cd;
+  background: #fff1f2;
+  color: #a32a37;
+}
+
+.subscription-bookings-notice.success {
+  margin: 14px 0;
+  border-color: #bde2c8;
+  background: #ebfaf0;
+  color: #17683b;
+}
+
+.subscription-booking-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.subscription-booking-panel {
+  padding: 18px;
+}
+
+.subscription-booking-panel.full {
+  grid-column: 1 / -1;
+}
+
+.subscription-booking-panel h2 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+}
+
+.subscription-details {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.subscription-details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 13px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #edf2ee;
+}
+
+.subscription-details dt {
+  color: #66756c;
+}
+
+.subscription-details dd {
+  margin: 0;
+  color: #1f422b;
+  font-weight: 800;
+  text-align: right;
+}
+
+.subscription-calendar-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.subscription-calendar-entry {
+  display: grid;
+  gap: 3px;
+  padding: 10px;
+  border: 1px solid #dbe8de;
+  border-radius: 10px;
+  background: #fbfdfb;
+  font-size: 0.74rem;
+}
+
+.subscription-calendar-entry.today {
+  border-color: #159a58;
+  background: #eaf9ef;
+}
+
+.subscription-status-action {
+  width: 100%;
+  min-height: 36px;
+  margin-top: 5px;
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 9px;
+  color: #fff;
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.subscription-status-action.accepted {
+  background: #167a45;
+}
+
+.subscription-status-action.preparing {
+  background: #d97706;
+}
+
+.subscription-status-action.completed {
+  background: #2563a8;
+}
+
+.subscription-status-action:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.subscription-status-complete {
+  margin-top: 5px;
+  color: #587064;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+@media (max-width: 850px) {
+  .subscription-bookings-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .subscription-booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subscription-booking-panel.full {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .subscription-bookings-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .subscription-bookings-heading,
+  .subscription-bookings-toolbar,
+  .subscription-delivery-card {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .subscription-bookings-heading {
+    padding: 18px;
+  }
+
+  .subscription-bookings-heading h1 {
+    font-size: 1.6rem;
+  }
+
+  .subscription-bookings-link,
+  .subscription-bookings-button {
+    width: 100%;
+  }
+
+  .subscription-bookings-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .subscription-delivery-card {
+    padding: 14px;
+  }
+
+  .subscription-delivery-side {
+    justify-items: stretch;
+    min-width: 0;
+  }
+
+  .subscription-prep-row,
+  .subscription-details div {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .subscription-prep-row strong,
+  .subscription-details dd {
+    text-align: left;
+  }
+
+  .subscription-booking-panel {
+    padding: 16px;
+  }
+
+  .subscription-calendar-list {
+    grid-template-columns: 1fr;
+  }
+
+  .subscription-calendar-entry {
+    padding: 12px;
+  }
+}

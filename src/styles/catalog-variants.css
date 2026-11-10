@@ -1,0 +1,19 @@
+.rv-category-options,.rv-variant-editor,.rv-html-options{border:1px solid #dcc5a6;border-radius:16px;padding:20px;margin:20px 0;background:#fffcf7}
+.rv-category-options legend,.rv-html-options legend{font-weight:800;color:#751f2b;padding:0 8px}
+.rv-option-checklist{display:flex;flex-wrap:wrap;gap:12px;margin:15px 0}
+.rv-option-checklist label{display:flex;align-items:center;gap:8px;border:1px solid #dbcab2;border-radius:9px;padding:10px 15px;cursor:pointer;background:#fff}
+.rv-variant-row{border:1px solid #ead5b5;border-radius:12px;padding:16px;margin:12px 0;background:#fff}
+.rv-variant-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px}
+.rv-variant-fields label{font-weight:600;font-size:.85rem;display:grid;gap:6px}
+.rv-variant-fields input{min-width:0;width:100%;padding:10px;border:1px solid #d5d0c9;border-radius:7px}
+.rv-variant-preview{width:90px;height:90px;object-fit:contain;margin:10px 0;border:1px solid #ddd;border-radius:7px}
+.rv-shop-options{border-top:1px solid #e5d3b6;border-bottom:1px solid #e5d3b6;padding:18px 0;margin:14px 0}
+.rv-shop-options h2{font-size:1.12rem;margin:0 0 12px}
+.rv-shop-option{margin-bottom:12px}.rv-shop-option strong{display:block;margin-bottom:7px}
+.rv-swatch-list{display:flex;flex-wrap:wrap;gap:9px}.rv-swatch-list button{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid #a49c93;color:#30221f;border-radius:9px;padding:8px 12px;cursor:pointer}
+.rv-swatch-list button.selected{border:2px solid #751f2b;background:#fff1e8;color:#751f2b;font-weight:700}
+.rv-color-dot{width:18px;height:18px;border:1px solid #aaa;border-radius:50%;display:inline-block}
+.rv-variant-summary{color:#315b48;margin:8px 0 0;font-size:.9rem}
+@media(max-width:650px){.rv-category-options,.rv-variant-editor{padding:14px}.rv-variant-fields{grid-template-columns:1fr 1fr}}
+
+.rv-card-colors{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 6px}.rv-card-colors a{display:inline-flex;gap:5px;align-items:center;font-size:.75rem;color:#751f2b;text-decoration:none;border:1px solid #e7d8c0;padding:4px 6px;border-radius:10px;background:#fff}.rv-card-colors a:hover{border-color:#751f2b}

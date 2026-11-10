@@ -1,0 +1,10 @@
+/* Identical EasyFindStore wordmark in header and footer. No tagline. */
+.efs-shared-brand { display: inline-flex; align-items: center; gap: 11px; color: #fff; text-decoration: none; white-space: nowrap; }
+.efs-shared-brand .efs2-bag { color: #f2bf59; width: 43px; height: 43px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.efs-shared-brand .efs2-bag svg { height: 40px; width: 40px; stroke-width: 1.5; }
+.efs-shared-brand .efs2-brand-words strong { font: 700 clamp(20px,1.9vw,28px)/1.15 'Playfair Display', Georgia, serif; letter-spacing: -.045em; color:#fff; }
+.efs-shared-brand .efs2-brand-words strong span { color: #f2bf59; }
+.ec-store-footer .efs-footer-logo { margin-bottom: 10px; }
+.ec-store-footer .efs-footer-logo .efs2-brand-words strong { font-size: clamp(22px,2vw,30px) !important; color: #fff !important; }
+.ec-store-footer .efs-footer-logo .efs2-brand-words strong span { color: #f2bf59 !important; }
+@media(max-width:480px) { .efs-shared-brand .efs2-bag {width:34px;height:34px;} .efs-shared-brand .efs2-bag svg {width:32px;height:32px;} .efs-shared-brand .efs2-brand-words strong {font-size:22px;} }

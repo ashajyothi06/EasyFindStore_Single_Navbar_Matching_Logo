@@ -1,0 +1,246 @@
+.delivery-booking-navigation {
+  position: relative;
+  overflow: hidden;
+  margin-top: 24px;
+  border: 1px solid #c9d7ff;
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      circle at 92% 18%,
+      rgba(47, 128, 237, 0.18),
+      transparent 34%
+    ),
+    linear-gradient(135deg, #f1f6ff, #ffffff);
+  padding: clamp(24px, 5vw, 42px);
+  box-shadow: 0 12px 32px rgba(23, 92, 170, 0.08);
+}
+
+.delivery-booking-navigation.has-new-bookings {
+  border-color: #f79009;
+  background:
+    radial-gradient(
+      circle at 92% 18%,
+      rgba(247, 144, 9, 0.2),
+      transparent 34%
+    ),
+    linear-gradient(135deg, #fff8ed, #ffffff);
+  box-shadow: 0 14px 38px rgba(181, 71, 8, 0.12);
+}
+
+.delivery-booking-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.delivery-booking-heading h2 {
+  margin: 8px 0 10px;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  letter-spacing: -0.045em;
+}
+
+.delivery-booking-heading p {
+  max-width: 780px;
+  margin: 0;
+  color: #667085;
+  line-height: 1.65;
+}
+
+.delivery-new-booking-alert {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: #f04438;
+  padding: 10px 14px;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(217, 45, 32, 0.22);
+}
+
+.delivery-booking-stats {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.delivery-booking-stat {
+  border: 1px solid rgba(152, 162, 179, 0.2);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 15px;
+}
+
+.delivery-booking-stat strong {
+  display: block;
+  color: #101828;
+  font-size: 1.35rem;
+  letter-spacing: -0.035em;
+}
+
+.delivery-booking-stat span {
+  display: block;
+  margin-top: 4px;
+  color: #667085;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.delivery-recent-bookings {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.delivery-recent-booking {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(90px, 0.45fr)
+    minmax(105px, 0.5fr)
+    minmax(105px, 0.5fr)
+    auto
+    auto;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  background: #fff;
+  padding: 14px;
+}
+
+.delivery-recent-booking.is-new {
+  border-color: #fdb022;
+  background: #fffcf5;
+}
+
+.delivery-recent-booking h3 {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.delivery-recent-booking small,
+.delivery-recent-booking span {
+  display: block;
+  margin-top: 4px;
+  color: #667085;
+  font-size: 0.7rem;
+}
+
+.delivery-recent-booking strong {
+  display: block;
+}
+
+.delivery-booking-status {
+  display: inline-flex !important;
+  width: fit-content;
+  border-radius: 999px;
+  background: #f2f4f7;
+  padding: 6px 9px;
+  color: #344054 !important;
+  font-size: 0.7rem !important;
+  font-weight: 850;
+  text-transform: capitalize;
+}
+
+.delivery-booking-status.assigned {
+  background: #eff8ff;
+  color: #175cd3 !important;
+}
+
+.delivery-booking-status.accepted,
+.delivery-booking-status.collecting {
+  background: #fffaeb;
+  color: #b54708 !important;
+}
+
+.delivery-booking-status.out_for_delivery {
+  background: #f4f3ff;
+  color: #5925dc !important;
+}
+
+.delivery-booking-status.completed {
+  background: #ecfdf3;
+  color: #067647 !important;
+}
+
+.delivery-dashboard-booking-button {
+  position: relative;
+}
+
+.delivery-dashboard-booking-badge {
+  display: inline-grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  margin-left: 7px;
+  border-radius: 999px;
+  background: #f04438;
+  padding: 0 6px;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 950;
+}
+
+.delivery-booking-empty {
+  margin-top: 20px;
+  border: 1px dashed #d0d5dd;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 22px;
+  text-align: center;
+}
+
+.delivery-booking-empty p {
+  margin: 6px 0 0;
+  color: #667085;
+}
+
+.dashboard-button.small {
+  min-height: 34px;
+  padding: 7px 11px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1050px) {
+  .delivery-booking-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .delivery-recent-booking {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .delivery-booking-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .delivery-booking-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .delivery-recent-booking {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .delivery-booking-stats,
+  .delivery-recent-booking {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-new-booking-alert {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,93 @@
+/* Rudraamshika brand system — imported last in main.tsx. Applies to customer and admin pages. */
+:root{--maroon:#0875a9;--maroon-dark:#075079;--maroon-soft:#eaf7ff;--emerald:#0875a9;--emerald-dark:#075079;--emerald-pale:#eaf7ff;--gold:#6accea;--gold-light:#c6efff;--gold-border:#cbe5f3;--theme-bg:#f7fbff;--royal-ink:#182d3d;--royal-muted:#637b8d;color:var(--royal-ink);background:var(--theme-bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+body{color:var(--royal-ink);background:var(--theme-bg)}
+body button,body input,body select,body textarea{font-family:inherit}
+:where(button,a,input,select,textarea):focus-visible{outline:3px solid #6bbfdf;outline-offset:3px}
+/* Header, drop-down and footer */
+.ec-site-header{background:linear-gradient(102deg,#063b62,#087bb4 68%,#065078)!important;border-bottom:2px solid var(--gold)!important;box-shadow:0 4px 21px #300a1226!important;z-index:100}
+.ec-site-inner{max-width:1580px;min-height:72px;padding:12px 24px}
+.ec-site-brand{color:#ffffff!important;font-family:Georgia,"Times New Roman",serif;font-weight:800;letter-spacing:-.025em;font-size:clamp(1.45rem,2.1vw,1.9rem)}
+.ec-site-brand span{font-family:Inter,system-ui,sans-serif;color:#a7e7ff!important;letter-spacing:.18em;font-size:.54rem}
+.ec-site-nav>a,.ec-site-nav>button,.ec-site-nav>.ec-site-user{color:#f1faff!important}
+.ec-site-nav>a:hover,.ec-site-nav>button:hover{color:var(--gold-light)!important}
+.ec-site-nav .ec-site-signup{background:#0875a9!important;color:white!important;border:1px solid #6accea!important;border-radius:8px!important}
+.ec-site-badge{background:#90dafa!important;color:#103f5a!important}.ec-site-badge.alert{background:#e65f55!important;color:white!important}
+.ec-shop-dropdown{background:#ffffff!important;border-color:#d9e9f4!important;box-shadow:0 20px 44px #173b5440}
+.ec-site-nav .ec-shop-dropdown a{color:#173b54!important}
+.ec-site-nav .ec-shop-dropdown a:hover{background:#e7f6fe!important;color:#0b78aa!important}
+.ec-site-nav .ec-shop-all{color:#0875a9!important}
+.ec-site-toggle{background:#0b80b5;color:#fff;border:1px solid #76c8e7}
+.ec-store-footer{background:linear-gradient(115deg,#063b62,#075983 70%,#063b62)!important;color:#f2faff;border-top:3px solid var(--gold);margin-top:0}
+.ec-store-footer strong{font-family:Georgia,serif;color:#bceaff;font-size:1.7rem}.ec-store-footer a{color:#e6f6ff}.ec-store-footer a:hover{color:#97ddff}.ec-store-footer p{color:#d5e9f7}
+/* Retail categories and product cards */
+.market-store,.market-cart{color:#203447}
+.market-top-strip{background:#0875a9!important;border-bottom:2px solid #58b7dc!important}.market-top-strip a{color:white!important}.market-top-strip a.active{border-bottom:3px solid var(--gold-light)!important;color:#ffffff!important}
+.market-search-row{background:#ffffff;border-color:var(--gold-border)}.market-search-row form input{border-color:#c7dce9}.market-search-row form button{background:var(--emerald)!important;color:white!important;border-color:var(--emerald)!important}
+.market-sidebar,.market-product,.market-cart-list,.market-cart-total,.market-promo{border-color:#c8e0ed!important}.market-side-selected,.market-side-root:hover{color:var(--emerald)!important;background:#eaf7ff!important}
+.market-sidebar h2,.market-section-title h1{color:#0b4771}.market-section-title .market-kicker,.market-kicker{color:var(--emerald)!important}
+.market-promo{background:linear-gradient(120deg,#073f65,#0d90bd 68%,#06547a)!important;color:#fff}.market-promo h1,.market-promo p,.market-promo-content>span{color:#fff!important}.market-promo a{background:#0875a9!important;color:white!important}
+.market-quick-categories a{border:1px solid var(--gold-border)!important;background:white}.market-quick-categories a:hover{border-color:var(--gold)!important}
+.market-amazon-card{background:#fff!important;border:1px solid #e6d6b6!important;border-radius:10px!important;overflow:hidden;box-shadow:0 8px 23px #5b321010!important}.market-amazon-card:hover{box-shadow:0 13px 28px #5b321028!important}.market-amazon-card .market-product-photo{background:#eef7fc}.market-choice-badge{background:#0875a9!important;color:#ffffff}.market-amazon-card .market-product-title{color:#33211d!important;font-weight:550}.market-amazon-card .market-product-title:hover,.market-card-detail-link{color:#0875a9!important}
+.market-deal-badge{background:#0a9ab6!important}.market-deal-caption{color:#0875a9!important}.market-price-line,.market-price-line strong{color:#0e527c!important}.market-product-stock{color:#0875a9!important}
+.market-tile-add,.market-main-btn,.market-product-add{background:var(--emerald)!important;color:#fff!important;border-color:var(--emerald)!important}.market-tile-add:hover,.market-main-btn:hover{background:#075079!important}.market-tile-qty{border-color:#cda957;background:#f0faff}.market-tile-qty button{color:var(--maroon)}
+.market-load-more{border:1px solid var(--gold)!important;color:var(--maroon)!important;border-radius:8px!important}
+/* Customer product pages, checkout, orders and policies */
+.ec-item-page,.ec-react-page,.ca-page,.react-dashboard-page,.react-addresses-page,.react-address-form-page,.orders-page,.order-detail-page,.market-cart{--primary:var(--maroon);--primary-dark:var(--maroon-dark)}
+.ec-item-page a,.order-detail-page a,.orders-page a,.market-cart a{color:var(--emerald)}
+.ec-buy-panel,.ec-item-gallery,.ec-about,.ec-item-specifications,.ec-item-document,.ec-item-more,.ec-react-panel,.react-dashboard-card,.cart-page-card,.checkout-card,.order-detail-card,.orders-page-card,.address-form-card,.service-area-admin .area-panel,.ca-card,.ca-feature-card,.ca-form-card,.offer-card,.admin-detail-card{border-color:var(--gold-border)!important;box-shadow:0 8px 28px #0b59800d}
+.ec-add-btn,.ec-buy-btn,.checkout-button,.cart-page-button,.order-detail-button,.orders-page-button,.address-form-button,.addresses-page-button,.react-auth-primary-button{background:var(--emerald)!important;border-color:var(--emerald)!important;color:white!important}
+.ec-buy-btn{background:var(--maroon)!important;border-color:var(--maroon)!important}
+.ec-react-eyebrow,.ca-eyebrow,.dashboard-eyebrow,.order-detail-eyebrow,.orders-page-eyebrow,.address-form-eyebrow,.offer-top .eyebrow{color:var(--emerald)!important}
+.ec-react-heading h1,.ca-heading h1,.ca-form-card h1,.admin-queue-heading h1,.admin-detail-layout h1,.react-dashboard-hero h1,.offer-top h1{color:#164766;font-family:Georgia,"Times New Roman",serif;letter-spacing:-.03em}
+.ec-react-heading,.ca-heading{border-bottom:1px solid #cbe5f3;padding-bottom:20px}
+.ec-react-links a{background:#fffaf1!important;border:1px solid var(--gold-border)!important;color:#5c2530!important}.ec-react-links a:hover{background:#fff1e7!important;border-color:#6accea!important}.ec-react-stats article{border-color:var(--gold-border);border-top:3px solid var(--emerald)}.ec-react-stats strong{color:var(--maroon)}
+.ec-react-primary,.ca-button.primary,.ca-button:not(.secondary):not(.ghost),.offer-save,.area-button,.admin-queue-open,.admin-queue-refresh{background:var(--emerald)!important;border-color:var(--emerald)!important;color:white!important}.ec-react-primary:hover,.offer-save:hover{background:var(--emerald-dark)!important}
+.ec-react-panel-title{background:#fffaf0!important;border-color:#e7d6ae}.ec-react-panel-title a,.ec-react-table-scroll td a{color:var(--emerald)!important}.ec-react-table-scroll th{background:#eaf6ff!important;color:#31566b!important}.ec-react-table-scroll th,.ec-react-table-scroll td{border-color:#ddeaf3!important}.ec-react-pill{background:#eaf7ff;color:#0875a9}
+.ca-card,.ca-feature-card,.ca-form-card,.ec-react-panel{background:#ffffff!important}
+.ca-form-card input:focus,.ca-form-card textarea:focus,.ca-form-card select:focus,.ec-react-page input:focus,.ec-react-page select:focus{outline:2px solid #6cc5ee;outline-offset:1px}
+.react-dashboard-hero{background:linear-gradient(110deg,#e9f6ff,#f5fbff 48%,#e4f4ff)!important;border-color:var(--gold-border)!important}
+.react-dashboard-avatar{background:var(--maroon)!important;box-shadow:0 14px 25px #78222b29!important}
+/* Order management and admin workflow */
+.admin-queue-page,.admin-detail-layout,.offer-admin,.delivery-pricing-page,.service-area-admin{--royal-maroon:#0875a9;--royal-green:#0875a9;--royal-gold:#6accea;color:#302421}
+.admin-queue-table-wrap,.admin-detail-card,.admin-queue-stats>*,.offer-card,.dp-grid>*,.area-panel{border-color:#e2d2ab!important}
+.admin-queue-table thead,.admin-queue-table th{background:#eaf6ff!important;color:#164766!important}
+.admin-queue-new,.admin-queue-due{background:#fff7e0!important;color:#75571b!important}
+.admin-queue-id,.admin-detail-back,.area-back-link{color:var(--emerald)!important}
+.offer-tabs button[aria-selected="true"],.offer-tabs button.active{background:var(--maroon)!important;color:white!important}
+/* Accounts and public content */
+.react-auth-container,.login-size-only-page{background:linear-gradient(145deg,#ffffff,#edf8ff)!important}.react-auth-card{border:1px solid var(--gold-border)!important;box-shadow:0 15px 50px #17486721!important}.react-auth-eyebrow{color:var(--emerald)!important}.react-auth-primary-button:hover{background:var(--emerald-dark)!important}
+.ec-react-page .ec-react-primary.ec-react-secondary{background:white!important;color:var(--emerald)!important}
+/* Generic UI controls for newly-added admin forms. Preserve warning/destructive semantics. */
+body input:not([type="checkbox"]):not([type="radio"]),body select,body textarea{accent-color:var(--emerald)}
+body input[type="checkbox"],body input[type="radio"]{accent-color:var(--emerald)}
+@media(max-width:1000px){.ec-site-nav{background:#06476b!important;border-color:#80c7e5!important}.ec-site-nav>a:hover{background:#0875a9!important}.ec-site-nav .ec-shop-dropdown{background:#ffffff!important}}
+@media(max-width:650px){.ec-site-inner{padding:10px 15px}.ec-react-heading,.ca-heading{padding-bottom:14px}.ec-react-heading h1,.ca-heading h1{font-size:30px}.market-amazon-card .market-product-content{padding:11px}}
+
+/* Maroon-only interactive surfaces: avoid legacy green from page-specific styles. */
+.market-top-strip,.market-top-inner{background:#0875a9!important;color:#fff!important}
+.market-top-strip a:hover,.market-top-strip a.active{background:#ffffff16!important;color:#f6d487!important}
+.market-search-row form button,.market-promo a,.market-tile-add,.market-main-btn,.market-product-add,.ec-add-btn,.ec-buy-btn,.checkout-button,.cart-page-button,.order-detail-button,.orders-page-button,.address-form-button,.addresses-page-button,.react-auth-primary-button,.ec-react-primary,.ca-button.primary,.ca-button:not(.secondary):not(.ghost),.offer-save,.area-button,.admin-queue-open,.admin-queue-refresh{background:#0875a9!important;border-color:#0875a9!important;color:#fff!important}
+.market-search-row form button:hover,.market-promo a:hover,.market-tile-add:hover,.market-main-btn:hover,.market-product-add:hover,.ec-add-btn:hover,.ec-buy-btn:hover,.checkout-button:hover,.react-auth-primary-button:hover,.ca-button.primary:hover,.offer-save:hover,.area-button:hover,.admin-queue-open:hover{background:#075079!important;border-color:#075079!important}
+.ec-site-nav .ec-site-signup,.ec-site-nav .ec-site-signup:hover{background:#0c89be!important;border-color:#6accea!important;color:#fff!important}
+.market-side-selected,.market-side-root:hover{color:#0875a9!important;background:#fff0ed!important}
+.market-kicker,.market-section-title .market-kicker,.ec-react-eyebrow,.ca-eyebrow,.dashboard-eyebrow,.order-detail-eyebrow,.orders-page-eyebrow,.address-form-eyebrow,.offer-top .eyebrow,.react-auth-eyebrow,.market-amazon-card .market-product-title:hover,.market-card-detail-link,.market-product-stock,.market-store .market-stock,.market-store a.market-product-link,.admin-queue-id,.admin-detail-back,.area-back-link{color:#0875a9!important}
+.ec-react-primary.ec-react-secondary,.ec-react-page .ec-react-primary.ec-react-secondary{background:white!important;color:#0875a9!important;border-color:#6accea!important}
+.market-promo{background:linear-gradient(110deg,#075079,#842938 77%,#0e527c)!important}
+.market-side-help{background:#fff0ed!important}.market-side-help small{color:#75565e!important}
+.market-quick-categories a:hover,.royal-collection:hover{background:#fff7ef!important}
+.ec-react-stats article{border-top-color:#0875a9!important}
+.ec-react-pill{background:#fff0ed!important;color:#0875a9!important}
+.admin-queue-page,.admin-detail-layout,.offer-admin,.delivery-pricing-page,.service-area-admin{--royal-green:#0875a9}
+body input:not([type="checkbox"]):not([type="radio"]),body select,body textarea,body input[type="checkbox"],body input[type="radio"]{accent-color:#0875a9!important}
+
+/* EasyFindStore identity */
+.ec-site-header{background:#fff!important;border-bottom:1px solid #d9e8f3!important;box-shadow:0 3px 18px #16476b0b!important}
+.ec-site-brand{font-family:Inter,ui-sans-serif,system-ui,sans-serif!important;color:#0875a9!important;font-weight:900!important;letter-spacing:-.055em!important}
+.ec-site-nav>a,.ec-site-nav>button,.ec-site-nav>.ec-site-user{color:#183d55!important}
+.ec-site-nav>a:hover,.ec-site-nav>button:hover{color:#0875a9!important}
+.ec-site-nav .ec-site-signup{background:#0875a9!important;border-color:#0875a9!important;color:white!important}
+.ec-site-badge{background:#0875a9!important;color:#fff!important}
+.ec-store-footer{background:#073b60!important;border-top:0!important;color:#eaf6ff!important}
+.ec-store-footer strong{font-family:inherit!important;color:white!important}
+.ec-store-footer a{color:#d5f0ff!important}
+@media(max-width:1000px){.ec-site-nav{background:#fff!important;border-color:#d9e8f3!important}.ec-site-nav>a:hover{background:#eaf7ff!important}}

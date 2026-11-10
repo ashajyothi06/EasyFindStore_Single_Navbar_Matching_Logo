@@ -1,0 +1,5 @@
+
+/* Cosmetic-only retail imagery; existing catalogue page layout is unchanged. */
+.market-store .market-promo-retail-image { width: min(42%, 440px); align-self:stretch; min-height:200px; background: url("../assets/easyfind/hero-fashion-original.jpg") center / cover no-repeat; border-radius:14px; box-shadow:0 10px 24px #04142638; }
+.market-store .market-collection-visual img { width:100%; height:100%; object-fit:cover; }
+@media(max-width:767px){ .market-store .market-promo-retail-image{display:none;} }

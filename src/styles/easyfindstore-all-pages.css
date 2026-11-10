@@ -1,0 +1,124 @@
+/* EasyFindStore | shared retail design language across public, customer and admin routes.
+   Loaded after the legacy application styles. Functional components and API logic unchanged. */
+:root {
+  --maroon: #102d49;
+  --maroon-dark: #071a2f;
+  --maroon-soft: #eaf0f7;
+  --emerald: #123a57;
+  --emerald-dark: #071a2f;
+  --emerald-pale: #eef3f8;
+  --gold: #e9b955;
+  --gold-light: #ffe3a1;
+  --gold-border: #d8dfeb;
+  --theme-bg: #f3f5f9;
+  --royal-ink: #12273d;
+  --royal-muted: #617286;
+  --efs2-navy: #071a2f;
+  --efs2-gold: #efc46b;
+  color: #15273a;
+  background: #f3f5f9;
+  font-family: 'DM Sans', 'Segoe UI', Arial, sans-serif;
+}
+html, body, #root {min-height:100%;}
+body {background:#f3f5f9!important;color:#15273a!important;font-family:'DM Sans', 'Segoe UI', Arial,sans-serif!important;}
+body button, body input, body select, body textarea {font-family:'DM Sans','Segoe UI',Arial,sans-serif;}
+:where(a,button,input,select,textarea,[role="button"]):focus-visible {outline:3px solid #efc46b!important;outline-offset:3px;}
+::selection {background:#f1cd78;color:#091b30;}
+
+/* Header is already a complete navy-and-gold component; keep its behavior and layout. */
+.efs2-header,.efs2-nav {background:#071a2f!important;}
+.efs2-announcement {background:linear-gradient(95deg,#d2a24d 0%,#ffe6ac 38%,#edc569 75%,#c5953e 100%)!important;}
+.efs2-nav-link:hover,.efs2-nav-link[aria-current="page"]{color:#ffdc8a!important;background:#142f4a!important;}
+.efs2-header .efs2-search button {background:linear-gradient(145deg,#ffe3a1,#e5b147)!important;color:#10213b!important;}
+
+/* Base surfaces: restrained retail UI for catalogue, customer accounts and management tables. */
+:where(.market-store,.market-cart,.ec-item-page,.ec-react-page,.react-checkout-page,.react-addresses-page,.react-address-form-page,.orders-page,.order-detail-page,.rudra-profile-page,.ca-page,.contact-page,.rudra-about-page,.admin-queue-page,.offer-admin,.service-area-admin) {
+  color:#152b42!important;
+  font-family:'DM Sans','Segoe UI',Arial,sans-serif!important;
+}
+:where(.market-store,.market-cart,.ec-item-page,.ec-react-page,.react-checkout-page,.react-addresses-page,.react-address-form-page,.orders-page,.order-detail-page,.rudra-profile-page,.ca-page) {background:#f3f5f9!important;}
+:where(.market-store,.market-cart,.ec-item-page,.ec-react-page,.react-checkout-page,.react-addresses-page,.react-address-form-page,.orders-page,.order-detail-page,.rudra-profile-page,.ca-page,.contact-page,.rudra-about-page) :is(h1,h2) {
+  font-family:'Playfair Display',Georgia,serif;
+  letter-spacing:-.025em;
+}
+:where(.market-store,.market-cart,.ec-item-page,.ec-react-page,.react-checkout-page,.react-addresses-page,.react-address-form-page,.orders-page,.order-detail-page,.rudra-profile-page,.ca-page) :is(input,select,textarea) {
+  accent-color:#d9a743;
+}
+:where(.ec-react-panel,.ec-buy-panel,.ec-item-gallery,.market-sidebar,.market-amazon-card,.market-cart-list,.market-cart-total,.react-dashboard-card,.react-addresses-card,.checkout-card,.order-detail-card,.orders-page-card,.rudra-profile-card,.contact-card,.ca-card,.ca-form-card) {
+  border-color:#dce3eb!important;
+  box-shadow:0 8px 25px rgba(6,25,44,.055)!important;
+}
+:where(.ec-react-page,.market-store,.react-addresses-page,.react-checkout-page,.orders-page,.order-detail-page) :is(.eyebrow,.ec-react-eyebrow,.addresses-page-eyebrow,.market-kicker) {color:#b4842b!important;}
+/* Accent buttons and real-commerce controls; don't alter disabled / danger states. */
+:where(.market-store,.market-cart,.ec-item-page,.ec-react-page,.react-checkout-page,.react-addresses-page,.react-address-form-page,.orders-page,.order-detail-page,.rudra-profile-page,.ca-page) :is(.button-primary,.market-main-btn,.market-product-add,.market-tile-add,.ec-add-btn,.ec-buy-btn,.ec-react-primary,.checkout-button-primary,.cart-page-button-primary,.addresses-page-button-primary,.address-form-button-primary,.orders-page-button-primary) {
+  background:#102e4a!important;
+  border-color:#102e4a!important;
+  color:white!important;
+}
+:where(.market-store,.market-cart,.ec-item-page,.ec-react-page,.react-checkout-page,.react-addresses-page,.react-address-form-page,.orders-page,.order-detail-page,.rudra-profile-page,.ca-page) :is(.button-primary,.market-main-btn,.market-product-add,.market-tile-add,.ec-add-btn,.ec-buy-btn,.ec-react-primary,.checkout-button-primary,.cart-page-button-primary,.addresses-page-button-primary,.address-form-button-primary,.orders-page-button-primary):hover:not(:disabled) {
+  background:#204a68!important;border-color:#204a68!important;
+}
+.market-top-strip,.market-top-inner {background:#071a2f!important;border-color:#bc9144!important;}
+.market-top-strip a.active {color:#ffda84!important;border-color:#ffda84!important;}
+.market-product-photo,.market-amazon-card .market-product-photo {background:#f4f6f9!important;}
+.market-amazon-card {border-color:#dce3eb!important;box-shadow:0 5px 17px #081a3012!important;}
+.market-amazon-card .market-product-title {color:#102c46!important;}
+.market-choice-badge,.market-deal-badge {background:#b98322!important;}
+.market-price-line,.market-price-line strong {color:#142a43!important;}
+.market-promo {background:linear-gradient(105deg,#06192d,#173d5c)!important;}
+.market-promo a {background:linear-gradient(125deg,#f8d885,#d8a544)!important;color:#132239!important;}
+.market-section-title h1,.market-sidebar h2 {color:#0b2741!important;}
+.ec-react-stats article {border-top:3px solid #e6b450!important;}
+.ec-react-table-scroll th,.admin-queue-table thead,.admin-queue-table th {background:#eaf0f6!important;color:#183653!important;}
+.ec-react-pill {background:#e9f0f6!important;color:#153d5a!important;}
+.ec-react-links a {background:#fff!important;border-color:#dbe4ed!important;color:#153752!important;}
+.ec-react-panel-title {background:#f5f7fa!important;border-color:#e5d8b8!important;}
+/* Existing admin features retain their page-specific functional colors for errors and warnings. */
+.admin-queue-page,.admin-detail-layout,.offer-admin,.service-area-admin,.delivery-pricing-page {--royal-maroon:#153a57;--royal-green:#153a57;--royal-gold:#e5b958;}
+.admin-queue-open,.admin-queue-refresh,.offer-save,.area-button {background:#102f4a!important;border-color:#102f4a!important;color:#fff!important;}
+.admin-queue-id,.admin-detail-back,.area-back-link {color:#164766!important;}
+
+/* Authentication screens have standalone cards and standalone retail photo compositions. */
+.react-auth-shell.rudra-auth-page,.react-auth-shell.rudra-register-page {
+  background:linear-gradient(150deg,#eef2f7,#f9fafc 55%,#ebf0f5)!important;
+  color:#102c44!important;
+  font-family:'DM Sans',Arial,sans-serif!important;
+}
+.rudra-auth-page .react-auth-split-layout,.rudra-register-page .react-auth-split-layout {
+  border:1px solid #dce3eb!important;
+  box-shadow:0 18px 55px #091c3020!important;
+  background:white!important;
+}
+.rudra-auth-page .react-auth-image-column,.rudra-register-page .react-auth-image-column {background:linear-gradient(155deg,#071a2f,#163a58)!important;}
+.rudra-auth-page .react-auth-image-container,.rudra-register-page .react-auth-image-container {background:#071a2f!important;}
+.rudra-auth-page .react-auth-image-container img,.rudra-register-page .react-auth-image-container img {object-fit:cover!important;}
+.rudra-auth-page .rudra-auth-brand-text strong,.rudra-register-page .rudra-register-brand-text strong,
+.rudra-auth-page .react-auth-content h1,.rudra-auth-page .react-auth-content h2,.rudra-auth-page .react-auth-content h3,
+.rudra-register-page .user-register-form h1,.rudra-auth-page .rudra-auth-side-intro h2,.rudra-register-page .rudra-register-side-intro h2 {
+  font-family:'Playfair Display',Georgia,serif!important;
+}
+.rudra-auth-page .react-auth-primary-button,.rudra-register-page .user-register-button {background:#0b2943!important;border-color:#0b2943!important;color:#fff!important;}
+.rudra-auth-page .react-auth-primary-button:hover,.rudra-register-page .user-register-button:hover {background:#194866!important;}
+.rudra-auth-page .react-auth-field input:focus,.rudra-register-page .react-auth-field input:focus,.rudra-register-page .react-auth-field textarea:focus {border-color:#d6a646!important;box-shadow:0 0 0 3px #edc66a38!important;}
+.rudra-auth-page .rudra-auth-side-kicker,.rudra-register-page .rudra-register-side-kicker {color:#ffdc8d!important;}
+.rudra-auth-page .rudra-auth-brand-mark,.rudra-register-page .rudra-register-brand-mark {background:#071a2f!important;color:#ffdb85!important;border-color:#e6b95d!important;}
+.rudra-auth-page .react-auth-eyebrow,.rudra-register-page .react-auth-eyebrow {background:#fff4db!important;border-color:#eed7a0!important;color:#86601a!important;}
+/* About and Contact: same elegant dark header sections and retail images. */
+.rudra-about-page {--rudra-maroon:#102f4a;--rudra-maroon-deep:#07192d;--rudra-maroon-soft:#17445e;--rudra-ink:#112d44;--rudra-gold:#e5b85d;--rudra-cream:#f3f5f9;}
+.rudra-about-page .rudra-about-banner {background:linear-gradient(120deg,#06192e,#183955)!important;border-color:#e3b556!important;}
+.rudra-about-page .rudra-about-banner h1,.contact-page h1 {font-family:'Playfair Display',Georgia,serif!important;}
+.contact-page .contact-image-stage img,.rudra-about-page img {object-fit:cover;}
+.contact-page .contact-kicker {color:#bf8d35!important;}
+.ec-store-footer {background:linear-gradient(145deg,#071829,#0e2a43 70%,#071829)!important;border-top:3px solid #e6b85a!important;}
+.ec-store-footer-inner > div:first-child strong {color:#ffda88!important;}
+.ec-store-footer a:hover {color:#ffdb8a!important;}
+@media (max-width:700px){
+  .rudra-auth-page .react-auth-image-container img,.rudra-register-page .react-auth-image-container img {object-fit:cover!important;}
+  .market-amazon-card {border-radius:10px!important;}
+}
+
+/* Consistent navy-and-gold brand across legacy internal routes; no layout resets. */
+.ec-store-footer .efs-footer-brand {font-family:'Playfair Display',Georgia,serif;color:#fff!important;font-weight:700;}
+.ec-store-footer .efs-footer-brand span:last-child{color:#f3c66d;}
+.ec-store-footer .efs-footer-brand-icon{color:#f3c66d;font-family:Arial,sans-serif;}
+:where(.market-store,.react-checkout-page,.react-addresses-page,.orders-page,.order-detail-page,.ec-item-page,.ec-react-page,.rudra-profile-page,.contact-page,.rudra-about-page) a:hover{ text-decoration-color:#e9b955; }

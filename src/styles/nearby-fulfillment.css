@@ -1,0 +1,348 @@
+.fulfillment-page {
+     width:100%;
+  padding:40px 0 80px;
+}
+.fulfillment-container{
+     width:100%;
+    padding-left:clamp(18px,4vw,64px);
+    padding-right:clamp(18px,4vw,64px);
+}
+.fulfillment-page * {
+    box-sizing: border-box 
+}
+
+.fulfillment-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px
+}
+
+.fulfillment-heading h1 {
+    margin: 7px 0 8px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: -.045em
+}
+
+.fulfillment-heading p {
+    max-width: 760px;
+    margin: 0;
+    color: #667085;
+    line-height: 1.65
+}
+
+.fulfillment-eyebrow {
+    color: #6941c6;
+    font-size: .76rem;
+    font-weight: 850;
+    letter-spacing: .1em;
+    text-transform: uppercase
+}
+
+.fulfillment-button {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font: inherit;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.fulfillment-button.primary {
+    background: #5b43d6;
+    color: #fff
+}
+
+.fulfillment-button.secondary {
+    border-color: #d0d5dd;
+    background: #fff;
+    color: #344054
+}
+
+.fulfillment-button.success {
+    background: #079455;
+    color: #fff
+}
+
+.fulfillment-button.danger {
+    background: #d92d20;
+    color: #fff
+}
+
+.fulfillment-button.small {
+    min-height: 34px;
+    padding: 7px 11px
+}
+
+.fulfillment-card {
+    border: 1px solid #e4e7ec;
+    border-radius: 20px;
+    background: #fff;
+    padding: 24px;
+    box-shadow: 0 10px 28px rgba(16, 24, 40, .055)
+}
+
+.fulfillment-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 22px
+}
+
+.fulfillment-stats article {
+    border: 1px solid #e4e7ec;
+    border-radius: 16px;
+    background: #fff;
+    padding: 18px
+}
+
+.fulfillment-stats strong {
+    display: block;
+    font-size: 1.5rem
+}
+
+.fulfillment-stats span {
+    display: block;
+    margin-top: 5px;
+    color: #667085;
+    font-size: .73rem;
+    font-weight: 800;
+    text-transform: uppercase
+}
+
+.fulfillment-table-wrap {
+    overflow-x: auto
+}
+
+.fulfillment-table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.fulfillment-table th,
+.fulfillment-table td {
+    border-bottom: 1px solid #eaecf0;
+    padding: 14px;
+    text-align: left;
+    vertical-align: middle
+}
+
+.fulfillment-table th {
+    background: #f9fafb;
+    font-size: .74rem;
+    text-transform: uppercase
+}
+
+.fulfillment-table td strong,
+.fulfillment-table td small {
+    display: block
+}
+
+.fulfillment-table td small {
+    color: #667085;
+    margin-top: 3px
+}
+
+.fulfillment-table input[type=number],
+.fulfillment-filter select,
+.admin-control-grid select,
+.diagnostics-form input,
+.decision-card textarea {
+    min-height: 42px;
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font: inherit
+}
+
+.fulfillment-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 18px
+}
+
+.fulfillment-notice {
+    margin: 16px 0;
+    border: 1px solid #b2ddff;
+    border-radius: 12px;
+    background: #eff8ff;
+    padding: 13px;
+    color: #175cd3
+}
+
+.fulfillment-notice.error {
+    border-color: #fecdca;
+    background: #fef3f2;
+    color: #b42318
+}
+
+.fulfillment-loading,
+.fulfillment-empty {
+    border: 1px dashed #d0d5dd;
+    border-radius: 18px;
+    background: #fff;
+    padding: 38px;
+    text-align: center
+}
+
+.fulfillment-list {
+    display: grid;
+    gap: 16px
+}
+
+.booking-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.booking-card h2 {
+    margin: 6px 0
+}
+
+.booking-card p {
+    color: #667085
+}
+
+.booking-meta {
+    display: grid;
+    justify-items: end;
+    gap: 7px
+}
+
+.fulfillment-status {
+    border-radius: 999px;
+    background: #f2f4f7;
+    padding: 6px 10px;
+    font-size: .75rem;
+    font-weight: 800
+}
+
+.fulfillment-grid {
+    display: grid;
+    gap: 18px
+}
+
+.fulfillment-grid.two {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
+.booking-items {
+    display: grid;
+    gap: 10px
+}
+
+.booking-items div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eaecf0;
+    padding: 10px 0
+}
+
+.fulfillment-details div {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 10px;
+    border-top: 1px solid #eaecf0;
+    padding: 10px 0
+}
+
+.fulfillment-details dd {
+    margin: 0
+}
+
+.decision-card {
+    margin-top: 20px
+}
+
+.decision-card form {
+    display: grid;
+    gap: 14px;
+    margin-top: 18px
+}
+
+.decision-card label {
+    display: grid;
+    gap: 7px
+}
+
+.checkbox-label {
+    grid-template-columns: auto 1fr !important;
+    align-items: start
+}
+
+.admin-control-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 16px
+}
+
+.admin-control-grid label {
+    display: grid;
+    gap: 7px
+}
+
+.diagnostics-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 140px auto auto;
+    gap: 10px;
+    margin-bottom: 20px
+}
+
+.nearby-dashboard-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px
+}
+
+@media(max-width:760px) {
+
+    .fulfillment-heading,
+    .booking-card,
+    .nearby-dashboard-card {
+        align-items: stretch;
+        flex-direction: column
+    }
+
+    .fulfillment-stats,
+    .fulfillment-grid.two,
+    .admin-control-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .diagnostics-form {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:520px) {
+    .fulfillment-page {
+        width: min(100% - 20px, 1180px)
+    }
+
+    .fulfillment-stats,
+    .fulfillment-grid.two,
+    .admin-control-grid,
+    .diagnostics-form {
+        grid-template-columns: 1fr
+    }
+
+    .booking-meta {
+        justify-items: start
+    }
+
+    .fulfillment-actions,
+    .fulfillment-actions .fulfillment-button {
+        width: 100%
+    }
+}

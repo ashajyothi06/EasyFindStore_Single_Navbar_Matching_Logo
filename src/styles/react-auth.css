@@ -1,0 +1,1331 @@
+/* =========================================================
+   Rudraamshika Login / OTP
+   Responsive desktop, tablet, and mobile styles
+   ========================================================= */
+
+:root {
+  /* Rudraamshika brand colors: maroon, gold and warm cream. */
+  --auth-maroon: #55111f;
+  --auth-maroon-dark: #3d0b17;
+  --auth-maroon-light: #8e2539;
+  --auth-gold: #d8a949;
+  --auth-cream: #fffaf4;
+
+  /* Compatibility aliases for existing login/registration components. */
+  --auth-green: var(--auth-maroon-light);
+  --auth-green-dark: var(--auth-maroon);
+  --auth-green-soft: #fff1e7;
+  --auth-title: #fffaf4;
+  --auth-text: #f3e5e0;
+  --auth-muted: #d6b8b6;
+  --auth-border: #9e6874;
+  --auth-accent: var(--auth-gold);
+  --auth-success: #e6bc67;
+  --auth-white: #ffffff;
+  --auth-header-height: 82px;
+}
+
+/*
+ * Prevent the area below the authentication screen from becoming white.
+ * :has() keeps the background limited to pages containing the login shell.
+ */
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+}
+
+body:has(.react-auth-shell),
+#root:has(.react-auth-shell) {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(216, 169, 73, 0.16),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(216, 169, 73, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 70% 18%,
+      rgba(255, 255, 255, 0.05),
+      transparent 14%
+    ),
+    #400d1a;
+}
+
+.react-auth-shell,
+.react-auth-shell * {
+  box-sizing: border-box;
+}
+
+.react-auth-shell {
+  width: 100%;
+  min-width: 0;
+  min-height: calc(100vh - var(--auth-header-height));
+  min-height: calc(100svh - var(--auth-header-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: clamp(24px, 4vw, 48px) 0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(216, 169, 73, 0.16),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(216, 169, 73, 0.12),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 70% 18%,
+      rgba(255, 255, 255, 0.05),
+      transparent 14%
+    ),
+    #400d1a;
+
+  color: var(--auth-title);
+  font-family: "EB Garamond", Georgia, serif;
+}
+
+.react-auth-container {
+  width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+  padding-inline: clamp(18px, 4vw, 64px);
+}
+
+.react-auth-shell > .react-auth-card {
+  width: min(520px, calc(100% - 36px));
+  min-height: 220px;
+  margin: auto;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(216, 169, 73, 0.24);
+  border-radius: 24px;
+  background: rgba(64, 13, 26, 0.96);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+/* ---------------- Desktop split layout ---------------- */
+
+.react-auth-split-layout {
+  width: 100%;
+  min-width: 0;
+  min-height: calc(100svh - var(--auth-header-height) - 80px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 1fr);
+  align-items: center;
+  gap: clamp(32px, 5vw, 76px);
+}
+
+.react-auth-form-column,
+.react-auth-image-column {
+  min-width: 0;
+}
+
+.react-auth-form-column {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-auth-card {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.react-auth-content {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.react-auth-image-column {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-auth-image-container {
+  width: 100%;
+  max-width: 720px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-auth-side-image {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  max-height: min(680px, calc(100svh - 160px));
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+.react-auth-mobile-image {
+  display: none;
+}
+
+/* ---------------- Typography and branding ---------------- */
+
+.react-auth-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 26px;
+  color: var(--auth-title);
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.react-auth-brand-mark {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #a33247, var(--auth-green));
+  color: #ffffff;
+  box-shadow: 0 14px 34px rgba(142, 37, 57, 0.24);
+}
+
+.react-auth-eyebrow {
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 14px;
+  color: var(--auth-accent);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.react-auth-logo {
+  width: clamp(190px, 22vw, 330px);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 18px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.react-auth-otp-logo {
+  width: clamp(165px, 18vw, 270px);
+  margin-bottom: 20px;
+}
+
+.react-auth-otp-content > .react-auth-eyebrow {
+  margin-bottom: 12px;
+}
+
+.react-auth-content h1,
+.react-auth-content h3 {
+  width: 100%;
+  margin: 0;
+  color: var(--auth-title);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.react-auth-content h1 {
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.react-auth-content h3 {
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.6px;
+}
+
+.react-auth-content p {
+  width: 100%;
+  max-width: 650px;
+  margin: 14px 0 0;
+  color: var(--auth-text);
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.react-auth-content strong {
+  color: var(--auth-title);
+}
+
+/* ---------------- Form controls ---------------- */
+
+.react-auth-field {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  gap: 10px;
+  margin-top: 26px;
+  color: var(--auth-title);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.react-auth-field input {
+  width: 100%;
+  min-width: 0;
+  min-height: 54px;
+  padding: 12px 18px;
+  border: 1px solid rgba(142, 37, 57, 0.2);
+  border-radius: 16px;
+  outline: none;
+  background: #fff9f5;
+  color: #40131c;
+  font: inherit;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  box-shadow: inset 0 1px 3px rgba(64, 19, 28, 0.05);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.react-auth-field input::placeholder {
+  color: #a48a8f;
+}
+
+.react-auth-field input:focus {
+  border-color: #8e2539;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(142, 37, 57, 0.12);
+  transform: translateY(-1px);
+}
+
+.react-auth-otp-field input {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 850;
+  letter-spacing: 0.4em;
+  padding-left: calc(18px + 0.4em);
+}
+
+.react-auth-primary-button {
+  width: 100%;
+  min-height: 54px;
+  margin-top: 22px;
+  padding: 13px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #efd498;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ead08d 0%, #d8a949 100%);
+  color: #400d1a;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    opacity 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.react-auth-primary-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ffdf9a 0%, #efca7a 100%);
+  box-shadow:
+    0 22px 44px rgba(0, 0, 0, 0.3),
+    0 0 0 3px rgba(216, 169, 73, 0.14);
+}
+
+.react-auth-primary-button:focus-visible,
+.react-auth-text-button:focus-visible,
+.react-auth-register-links a:focus-visible,
+.otp-anim-input:focus-visible {
+  outline: 3px solid rgba(216, 169, 73, 0.42);
+  outline-offset: 3px;
+}
+
+.react-auth-primary-button:disabled,
+.react-auth-text-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+  transform: none;
+}
+
+/* ---------------- Registration links ---------------- */
+
+.react-auth-register-links {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.react-auth-register-links a {
+  position: relative;
+  min-width: 0;
+  min-height: 48px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border: 1px solid rgba(216, 169, 73, 0.58);
+  border-radius: 14px;
+  background: rgba(216, 169, 73, 0.1);
+  color: var(--auth-title);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.react-auth-register-links a:nth-child(1) {
+  border-color: #d8a949;
+  background: linear-gradient(135deg, #6e1a2b, #872538);
+  color: #fffaf4;
+}
+
+.react-auth-register-links a:nth-child(2) {
+  border-color: #dfb962;
+  background: linear-gradient(135deg, #792034, #98304a);
+  color: #fffaf4;
+}
+
+.react-auth-register-links a:nth-child(3) {
+  border-color: #e3bf77;
+  background: linear-gradient(135deg, #572033, #783143);
+  color: #fffaf4;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .react-auth-register-links a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
+  }
+
+  .react-auth-register-links a:nth-child(1):hover {
+    border-color: #f9dfa4;
+    background: linear-gradient(135deg, #f0cc86, #d6a64c);
+    color: #400d1a;
+  }
+
+  .react-auth-register-links a:nth-child(2):hover {
+    border-color: #f5dca4;
+    background: linear-gradient(135deg, #b45267, #8d2940);
+    color: #400d1a;
+  }
+
+  .react-auth-register-links a:nth-child(3):hover {
+    border-color: #f7d796;
+    background: linear-gradient(135deg, #dba950, #b0782e);
+    color: #400d1a;
+  }
+}
+
+/* ---------------- Secondary actions and notices ---------------- */
+
+.react-auth-secondary-actions {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+}
+
+.react-auth-text-button {
+  min-height: 40px;
+  padding: 5px 2px;
+  border: 0;
+  background: transparent;
+  color: var(--auth-accent);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.react-auth-text-button:hover:not(:disabled) {
+  color: #ffe5a8;
+  text-decoration: underline;
+}
+
+.react-auth-attempts {
+  width: 100%;
+  display: block;
+  margin: 0 0 4px;
+  color: var(--auth-muted);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.react-auth-notice {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 13px 15px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.react-auth-notice.success {
+  border-color: #ead3a3;
+  background: #fff7e8;
+  color: #6c371c;
+}
+
+.react-auth-notice.error {
+  border-color: #ecc7c9;
+  background: #fff2f3;
+  color: #92223a;
+}
+
+.react-auth-notice.info {
+  border-color: #e5cfc5;
+  background: #fff7ee;
+  color: #683245;
+}
+
+/* ---------------- OTP animation inputs ---------------- */
+
+.otp-anim-inputs {
+  --otp-size: clamp(48px, 5vw, 62px);
+  --otp-gap: clamp(8px, 1vw, 13px);
+
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  min-height: calc(var(--otp-size) + 18px);
+  margin: 24px 0 20px;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: var(--otp-gap);
+  overflow: visible;
+}
+
+.otp-anim-inputs.is-complete {
+  min-height: 238px;
+}
+
+.otp-anim-wrapper {
+  position: relative;
+  width: var(--otp-size);
+  height: var(--otp-size);
+  min-width: var(--otp-size);
+  flex: 0 0 var(--otp-size);
+  overflow: hidden;
+  border: 2px solid #4c1724;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(64, 19, 28, 0.1);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.otp-anim-wrapper:hover {
+  border-color: var(--auth-green);
+}
+
+.otp-anim-wrapper:focus-within {
+  z-index: 10;
+  border-color: var(--auth-green);
+  box-shadow:
+    0 0 0 4px rgba(142, 37, 57, 0.14),
+    0 10px 24px rgba(142, 37, 57, 0.14);
+}
+
+.otp-anim-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  z-index: 0;
+  opacity: 0;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #efc679,
+    #8e2539,
+    transparent 72%
+  );
+  pointer-events: none;
+}
+
+.otp-anim-inputs.is-complete .otp-anim-wrapper::before {
+  opacity: 1;
+  animation: otp-border-spin 1s linear 2;
+}
+
+.otp-anim-input {
+  position: absolute;
+  inset: 3px;
+  z-index: 2;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 9px;
+  outline: 0;
+  background: #ffffff;
+  color: #4c1724;
+  -webkit-text-fill-color: currentColor;
+  caret-color: var(--auth-green);
+  font-family: Arial, sans-serif;
+  font-size: clamp(21px, 2.5vw, 28px);
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+
+.otp-anim-final-tick {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 30;
+  width: 40px;
+  height: 40px;
+  display: block;
+  overflow: visible;
+  color: #40131c;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+  pointer-events: none;
+}
+
+.otp-anim-final-tick path {
+  vector-effect: non-scaling-stroke;
+}
+
+.otp-anim-inputs.is-complete .otp-anim-final-box {
+  border-color: var(--auth-green);
+  background: #ffffff;
+  box-shadow:
+    0 0 0 5px rgba(142, 37, 57, 0.13),
+    0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+.otp-anim-inputs.is-complete .otp-anim-final-box .otp-anim-input {
+  background: transparent;
+  caret-color: transparent;
+}
+
+.otp-anim-inputs > svg {
+  width: min(320px, calc(100vw - 40px)) !important;
+  height: min(320px, calc(100vw - 40px)) !important;
+  max-width: 320px;
+  max-height: 320px;
+}
+
+.otp-anim-inputs > svg circle {
+  stroke: var(--auth-accent);
+}
+
+.otp-anim-inputs::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(142, 37, 57, 0.22) 0%,
+    rgba(142, 37, 57, 0.1) 40%,
+    rgba(142, 37, 57, 0) 72%
+  );
+  pointer-events: none;
+}
+
+.otp-anim-inputs.is-complete::before {
+  opacity: 1;
+  animation: otp-success-pulse 1.2s ease-in-out infinite alternate;
+}
+
+.otp-anim-footer {
+  position: relative;
+  width: 100%;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.otp-anim-success-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--auth-success);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+@keyframes otp-border-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes otp-success-pulse {
+  from {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 1;
+  }
+}
+
+/* ---------------- Gold and maroon loader ---------------- */
+
+.react-auth-loader {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  margin: 12px auto 22px;
+  border: 0;
+  border-radius: 50%;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at center, #400d1a 0 30%, transparent 31%),
+    conic-gradient(
+      from 0deg,
+      transparent 0deg 26deg,
+      #ffdf9a 28deg 82deg,
+      transparent 84deg 154deg,
+      #d8a949 156deg 222deg,
+      transparent 224deg 292deg,
+      #e6bc67 294deg 338deg,
+      transparent 340deg 360deg
+    );
+  box-shadow:
+    0 0 0 1px rgba(216, 169, 73, 0.16),
+    0 18px 42px rgba(0, 0, 0, 0.3),
+    0 0 34px rgba(216, 169, 73, 0.16);
+  animation: react-auth-orbit-spin 1.8s linear infinite;
+}
+
+.react-auth-loader::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  z-index: 2;
+  border: 2px solid rgba(255, 226, 161, 0.7);
+  border-top-color: transparent;
+  border-bottom-color: var(--auth-success);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #ffdf9a 0 10%, #d8a949 11% 20%, #400d1a 22% 100%);
+  box-shadow:
+    inset 0 0 18px rgba(216, 169, 73, 0.22),
+    0 0 18px rgba(216, 169, 73, 0.16);
+  animation: react-auth-orbit-reverse 1.15s linear infinite;
+}
+
+.react-auth-loader::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: calc(50% - 7px);
+  z-index: 3;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #400d1a;
+  border-radius: 50%;
+  background: #ffdf9a;
+  box-shadow:
+    0 0 0 5px rgba(255, 226, 161, 0.12),
+    0 0 20px rgba(255, 226, 161, 0.85);
+  animation: react-auth-loader-glow 900ms ease-in-out infinite alternate;
+}
+
+.react-auth-loading-text {
+  width: fit-content;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    var(--auth-text) 0%,
+    #ffdf9a 45%,
+    var(--auth-success) 62%,
+    var(--auth-text) 100%
+  );
+  background-size: 220% 100%;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+  animation:
+    react-auth-loader-text-shimmer 1.8s ease-in-out infinite,
+    react-auth-loader-text-float 1.8s ease-in-out infinite;
+}
+
+@keyframes react-auth-orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes react-auth-orbit-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes react-auth-loader-glow {
+  from {
+    opacity: 0.72;
+    scale: 0.82;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1.18;
+  }
+}
+
+@keyframes react-auth-loader-text-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -120% 0;
+  }
+}
+
+@keyframes react-auth-loader-text-float {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.76;
+  }
+
+  50% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+/* ---------------- Tablet ---------------- */
+
+@media (max-width: 991px) {
+  :root {
+    --auth-header-height: 72px;
+  }
+
+  .react-auth-shell {
+    align-items: flex-start;
+    padding: 28px 0 42px;
+  }
+
+  .react-auth-split-layout {
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .react-auth-form-column {
+    justify-content: center;
+  }
+
+  .react-auth-card {
+    max-width: 680px;
+  }
+
+  .react-auth-content {
+    max-width: 620px;
+  }
+
+  .react-auth-image-column {
+    display: none;
+  }
+
+  .react-auth-mobile-image {
+    width: 100%;
+    min-height: clamp(170px, 32vw, 245px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    margin: 8px 0 18px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .react-auth-mobile-image .react-auth-side-image {
+    width: min(100%, 520px);
+    height: auto;
+    max-width: 520px;
+    max-height: 245px;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+/* ---------------- Mobile ---------------- */
+
+@media (max-width: 768px) {
+  :root {
+    --auth-header-height: 66px;
+  }
+
+  .react-auth-shell,
+  .react-auth-login-page {
+    min-height: 100vh;
+    min-height: 100svh;
+    align-items: center;
+    padding: 18px 0;
+  }
+
+  .react-auth-container {
+    padding-inline: 18px;
+  }
+
+  .react-auth-form-column,
+  .react-auth-card,
+  .react-auth-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .react-auth-logo {
+    width: min(240px, 72vw);
+    margin-bottom: 14px;
+  }
+
+  .react-auth-otp-logo {
+    width: min(205px, 62vw);
+    margin-bottom: 16px;
+  }
+
+  .react-auth-mobile-image {
+    min-height: clamp(165px, 48vw, 215px);
+    margin: 6px 0 16px;
+  }
+
+  .react-auth-mobile-image .react-auth-side-image {
+    width: min(108%, 460px);
+    max-width: 460px;
+    max-height: 215px;
+    transform: scale(1.08);
+    transform-origin: center;
+  }
+
+  .react-auth-content h1 {
+    font-size: clamp(30px, 8vw, 38px);
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+  }
+
+  .react-auth-content h3 {
+    font-size: clamp(28px, 7.4vw, 34px);
+    line-height: 1.12;
+  }
+
+  .react-auth-content p {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.58;
+  }
+
+  .react-auth-field {
+    margin-top: 22px;
+    font-size: 15px;
+  }
+
+  .react-auth-field input,
+  .react-auth-primary-button {
+    min-height: 52px;
+    border-radius: 14px;
+  }
+
+  .react-auth-primary-button {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+
+  .react-auth-email-content {
+    align-items: stretch;
+    text-align: left;
+  }
+
+  /* Keep all form text left-aligned. The logo also starts from the left,
+     while the product artwork remains centred below it. */
+  .react-auth-email-content .react-auth-logo {
+    align-self: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+    object-position: left center;
+  }
+
+  .react-auth-email-content h1,
+  .react-auth-email-content h3,
+  .react-auth-email-content p,
+  .react-auth-email-content .react-auth-eyebrow,
+  .react-auth-email-content .react-auth-field,
+  .react-auth-email-content .react-auth-field > span {
+    text-align: left;
+  }
+
+  .react-auth-email-content .react-auth-eyebrow {
+    align-self: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .react-auth-register-links {
+    grid-template-columns: 1fr !important;
+    gap: 7px;
+    margin-top: 14px;
+  }
+
+  .react-auth-register-links a {
+    min-height: 48px;
+    justify-content: center;
+    padding: 8px 4px;
+    font-size: 11px;
+    line-height: 1.15;
+    text-align: center;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .react-auth-otp-content h1,
+  .react-auth-otp-content h3,
+  .react-auth-otp-content p,
+  .react-auth-otp-content .react-auth-eyebrow,
+  .react-auth-otp-content .react-auth-field {
+    text-align: left;
+  }
+
+  .react-auth-secondary-actions {
+    gap: 8px 20px;
+  }
+
+  .otp-anim-inputs {
+    --otp-size: clamp(37px, calc((100vw - 96px) / 6), 50px);
+    --otp-gap: clamp(5px, 1.5vw, 8px);
+
+    margin: 20px 0 18px;
+    padding: 6px 0;
+  }
+
+  .otp-anim-inputs.is-complete {
+    min-height: 210px;
+  }
+
+  .otp-anim-wrapper {
+    border-radius: 11px;
+  }
+
+  .otp-anim-input {
+    inset: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: 7px;
+    font-size: clamp(17px, 5vw, 22px);
+  }
+
+  .otp-anim-inputs > svg {
+    width: min(280px, calc(100vw - 28px)) !important;
+    height: min(280px, calc(100vw - 28px)) !important;
+  }
+
+  .otp-anim-inputs::before {
+    width: 190px;
+    height: 190px;
+  }
+
+  .otp-anim-final-tick {
+    width: 34px;
+    height: 34px;
+  }
+
+  .react-auth-attempts {
+    margin: 0 0 4px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .otp-anim-final-tick {
+    width: 31px;
+    height: 31px;
+  }
+
+  .react-auth-shell,
+  .react-auth-login-page {
+    min-height: 100vh;
+    min-height: 100svh;
+    align-items: center;
+    padding: 14px 0;
+  }
+
+  .react-auth-container {
+    padding-inline: 14px;
+  }
+
+  .react-auth-mobile-image {
+    min-height: 158px;
+    margin: 4px 0 14px;
+    padding: 0;
+  }
+
+  .react-auth-mobile-image .react-auth-side-image {
+    width: min(110%, 430px);
+    max-width: 430px;
+    max-height: 198px;
+    transform: scale(1.1);
+  }
+
+  .react-auth-register-links {
+    gap: 5px;
+  }
+
+  .react-auth-register-links a {
+    min-height: 46px;
+    padding: 7px 3px;
+    border-radius: 12px;
+    font-size: 10.5px;
+  }
+
+  .react-auth-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  .react-auth-otp-logo {
+    width: min(185px, 64vw);
+    margin-bottom: 14px;
+  }
+
+  .react-auth-content h1,
+  .react-auth-content h3 {
+    font-size: 28px;
+  }
+
+  .react-auth-content p {
+    font-size: 14px;
+  }
+
+  .react-auth-field input,
+  .react-auth-primary-button {
+    min-height: 50px;
+  }
+
+  .otp-anim-inputs {
+    --otp-size: clamp(34px, calc((100vw - 70px) / 6), 44px);
+    --otp-gap: 5px;
+  }
+
+  .otp-anim-inputs.is-complete {
+    min-height: 190px;
+  }
+}
+
+@media (max-width: 350px) {
+  .react-auth-container {
+    padding-inline: 8px;
+  }
+
+  .react-auth-register-links {
+    gap: 4px;
+  }
+
+  .react-auth-register-links a {
+    min-height: 44px;
+    padding: 6px 2px;
+    font-size: 9.5px;
+  }
+
+  .otp-anim-inputs {
+    --otp-size: clamp(32px, calc((100vw - 58px) / 6), 40px);
+    --otp-gap: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .react-auth-field input,
+  .react-auth-primary-button,
+  .react-auth-register-links a,
+  .otp-anim-wrapper {
+    transition: none;
+  }
+
+  .react-auth-loader,
+  .react-auth-loader::before,
+  .react-auth-loader::after,
+  .react-auth-loading-text,
+  .otp-anim-inputs.is-complete .otp-anim-wrapper::before,
+  .otp-anim-inputs.is-complete::before {
+    animation: none;
+  }
+}
+
+.react-auth-email-content p,
+.react-auth-otp-content p,
+.react-auth-otp-content h1 {
+  max-width: 580px !important;
+}
+
+.react-auth-email-content .react-auth-field,
+.react-auth-email-content .react-auth-primary-button,
+.react-auth-email-content .react-auth-register-links,
+.react-auth-otp-content .react-auth-primary-button,
+.react-auth-otp-content .otp-anim-inputs,
+.react-auth-otp-content .react-auth-secondary-actions {
+  max-width: 580px !important;
+  width: 100% !important;
+}
+
+/* ---------------- Responsive Desktop side image alignment ---------------- */
+@media (min-width: 993px) {
+  /* Login Page: Right column image aligns with the rightmost header button */
+  .react-auth-form-column + .react-auth-image-column {
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+  .react-auth-form-column + .react-auth-image-column .react-auth-image-container {
+    justify-content: flex-end !important;
+    max-width: 100% !important;
+  }
+  .react-auth-form-column + .react-auth-image-column .react-auth-side-image {
+    max-width: 100% !important;
+    width: 100% !important;
+    object-position: right center !important;
+    max-height: min(720px, calc(100svh - 140px)) !important;
+  }
+
+  /* User Registration Page: Left column image aligns with the leftmost logo */
+  .react-auth-image-column:first-child {
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+  .react-auth-image-column:first-child .react-auth-image-container {
+    justify-content: flex-start !important;
+    max-width: 100% !important;
+  }
+  .react-auth-image-column:first-child .react-auth-side-image {
+    max-width: 100% !important;
+    width: 100% !important;
+    object-position: left center !important;
+    max-height: min(720px, calc(100svh - 140px)) !important;
+  }
+}
+
+/* ---------------- Mobile form element width override ---------------- */
+@media (max-width: 768px) {
+  .react-auth-email-content p,
+  .react-auth-otp-content p,
+  .react-auth-otp-content h1,
+  .react-auth-email-content .react-auth-field,
+  .react-auth-email-content .react-auth-primary-button,
+  .react-auth-email-content .react-auth-register-links,
+  .react-auth-otp-content .react-auth-primary-button,
+  .react-auth-otp-content .otp-anim-inputs,
+  .react-auth-otp-content .react-auth-secondary-actions {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+
+/* =========================================================
+   Rudraamshika login-specific page harmony
+   Keep this last so the background outside the cream form
+   matches the new Home / Header theme. Other auth routes
+   remain maroon by default.
+   ========================================================= */
+body:has(.react-auth-shell.rudra-auth-page),
+#root:has(.react-auth-shell.rudra-auth-page) {
+  background: #fbf7f0;
+}
+
+/* Avoid legacy green inherited from older auth animations and controls. */
+.react-auth-shell .react-auth-primary-button:focus-visible,
+.react-auth-shell .react-auth-text-button:focus-visible,
+.react-auth-shell .react-auth-register-links a:focus-visible,
+.react-auth-shell .otp-anim-input:focus-visible {
+  outline-color: rgba(216, 169, 73, .65);
+}
+
+/* Explicitly support latest Rudraamshika login shell while retaining its
+   local component styles and OTP animation behavior. */
+.react-auth-shell.rudra-auth-page {
+  --auth-title: #40131c;
+  --auth-text: #70525a;
+  --auth-muted: #876d73;
+  --auth-accent: #a6732f;
+  --auth-border: #d9b78c;
+}

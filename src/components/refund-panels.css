@@ -1,0 +1,14 @@
+.rudra-refund-panel{margin:18px 0;padding:22px;border:1px solid #dac5b2;background:#fffaf4;border-radius:12px;color:#3c2630}.rudra-refund-panel h2{color:#751f2b;font-size:20px;margin:0 0 14px}.rudra-refund-panel h3{font-size:16px;margin:14px 0}.rudra-refund-panel p{line-height:1.55;font-size:14px}.rudra-refund-panel form{margin:14px 0}.rudra-refund-panel label{display:block;font-size:13px;font-weight:600;margin:12px 0}.rudra-refund-panel input,.rudra-refund-panel select,.rudra-refund-panel textarea{display:block;width:100%;box-sizing:border-box;margin-top:6px;padding:11px;border:1px solid #d6c7bd;border-radius:7px;font:inherit}.rudra-refund-panel button{background:#751f2b;color:#fff;padding:11px 15px;border:0;border-radius:7px;font-weight:700;cursor:pointer}.rudra-refund-panel button:disabled{opacity:.5;cursor:not-allowed}.rudra-refund-panel ol{padding-left:18px;color:#5f555b;font-size:13px}
+
+/* Admin cancellation with separate explicit confirmation */
+.rudra-cancel-admin{margin:18px 0;padding:18px;border:1px solid #eac5c7;border-radius:12px;background:#fff7f5}
+.rudra-cancel-admin h2{font-size:18px;margin:0 0 8px;color:#751f2b}
+.rudra-cancel-admin p{font-size:13px;line-height:1.5}
+.rudra-cancel-form label{display:block;margin:12px 0;font-size:13px;font-weight:600}
+.rudra-cancel-form textarea,.rudra-cancel-form select,.rudra-cancel-form input[type=date]{width:100%;max-width:100%;box-sizing:border-box;display:block;border:1px solid #bfa9a9;border-radius:8px;padding:10px;margin-top:6px;font:inherit}
+.rudra-cancel-check{display:flex!important;align-items:flex-start;gap:9px;font-weight:500!important}
+.rudra-cancel-check input{width:auto!important;flex-shrink:0;margin:3px 0!important}
+.rudra-cancel-admin button.rudra-cancel-toggle{background:#fff;border:1px solid #a42e3d;color:#7b1a1a;border-radius:8px;padding:10px 14px;cursor:pointer}
+.rudra-cancel-admin button.rudra-cancel-confirm{background:#951e2b;color:white;border:0;border-radius:8px;padding:11px 15px;cursor:pointer}
+.rudra-cancel-admin button:disabled{opacity:.5;cursor:not-allowed}
+.rudra-refund-closed{color:#5b2030;font-weight:600}

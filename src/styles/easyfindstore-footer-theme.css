@@ -1,0 +1,35 @@
+/* Customer-facing footer shares the selected navy-and-gold design language. */
+.ec-store-footer {
+  margin-top: 0 !important;
+  background: linear-gradient(165deg, #07182b 0%, #0d2740 70%, #061525 100%) !important;
+  border-top: 3px solid #d7aa51 !important;
+  color: #f7f7f7 !important;
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  box-shadow: inset 0 9px 25px #0002;
+}
+.ec-store-footer-inner {padding-top: 34px; padding-bottom: 30px;}
+.ec-store-footer-inner > div:first-child strong {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  color: #ffda85 !important;
+  font-size: clamp(25px, 2vw, 34px) !important;
+  letter-spacing: -.025em;
+}
+.ec-store-footer-inner nav::before {
+  content: 'Explore';
+  color: #f3c668;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: .02em;
+  margin-bottom: 8px;
+}
+.ec-store-footer-inner nav:nth-of-type(2)::before {content: 'Customer Care';}
+.ec-store-footer a {color: #dfe7ef !important; transition: color .18s ease;}
+.ec-store-footer a:hover, .ec-store-footer a:focus-visible {color: #f6ce77 !important; text-decoration: underline;}
+.ec-store-footer p {color: #d5dce5 !important;}
+.ec-store-footer-copy {border-top: 1px solid #b6924d55 !important; color: #c9d4de !important;}
+/* Navigable catalogue categories also act as filter buttons. */
+.efs2-category-grid .efs2-category-card {padding: 0; cursor: pointer; text-align: inherit; font-family: inherit;}
+.efs2-category-grid .efs2-category-card:focus-visible {outline: 3px solid #f3c668; outline-offset: 3px;}
+@media (max-width: 767px) {
+  .ec-store-footer-inner {padding-top: 26px !important;}
+}

@@ -1,0 +1,242 @@
+/* Rudraamshika: compact, sharp, original-color video hero.
+   This stylesheet only targets the HomeHero component; other pages are unchanged.
+   Video is imported from src/assets/hero.mp4 in HomeHero.tsx.
+*/
+
+.royal-home .royal-hero.royal-hero-with-video {
+  --hero-content-width: 1336px;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: clamp(490px, 35vw, 550px); /* Previously up to 680px */
+  min-height: 0;
+  max-height: none;
+  padding: 0;
+  overflow: hidden;
+  background: #1d1315;
+  box-sizing: border-box;
+}
+
+/* Neutralize any gradients injected by the site's original royal-hero rules. */
+.royal-home .royal-hero-with-video::before,
+.royal-home .royal-hero-with-video::after {
+  content: none !important;
+  display: none !important;
+}
+
+.royal-home .royal-hero-with-video .royal-hero-video,
+.royal-home .royal-hero-with-video .royal-hero-fallback {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+  /* Never alter the video with blur, wash, brightness or blending. */
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  mix-blend-mode: normal !important;
+  transform: none;
+}
+
+.royal-home .royal-hero-with-video .royal-hero-fallback {
+  z-index: 0;
+  opacity: 1;
+}
+
+.royal-home .royal-hero-with-video .royal-hero-video {
+  z-index: 1;
+  opacity: 0; /* Fallback image shows until video has started playing. */
+  transition: none !important;
+}
+
+.royal-home .royal-hero-with-video .royal-hero-video.is-playing {
+  opacity: 1;
+}
+
+/* Absolutely no color or opacity overlay on the video. */
+.royal-home .royal-hero-with-video .royal-hero-wash {
+  display: none !important;
+  opacity: 0 !important;
+  background: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Align the content with the main site's center gutters. */
+.royal-home .royal-hero-with-video .royal-hero-content {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: calc(100% - 48px);
+  max-width: var(--hero-content-width);
+  height: 100%;
+  margin: 0 auto;
+  padding: 12px 0 28px;
+  box-sizing: border-box;
+  text-align: left;
+  color: #fff;
+  /* Shadows only affect the text, not the original video. */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .65);
+  background: transparent !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.royal-home .royal-hero-with-video .royal-hero-eyebrow {
+  margin: 0 0 18px;
+  color: #ffdfab;
+  text-shadow: 0 2px 7px rgba(0, 0, 0, .6);
+}
+
+.royal-home .royal-hero-with-video .royal-hero-content h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(40px, 4.2vw, 67px);
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  color: #fff;
+}
+
+.royal-home .royal-hero-with-video .royal-hero-lede {
+  max-width: 590px;
+  margin: 20px 0 0;
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.6;
+  color: #fff;
+}
+
+.royal-home .royal-hero-with-video .royal-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.royal-home .royal-hero-with-video .royal-btn {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  text-shadow: none;
+}
+
+.royal-home .royal-hero-with-video .royal-btn-secondary {
+  color: #fff;
+  background: rgba(27, 14, 24, .46);
+  border-color: rgba(255, 255, 255, .8);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.royal-home .royal-hero-with-video .royal-btn-secondary:hover {
+  background: rgba(27, 14, 24, .7);
+}
+
+.royal-home .royal-hero-with-video .royal-hero-decoration,
+.royal-home .royal-hero-with-video .royal-hero-mark,
+.royal-home .royal-hero-with-video .royal-hero-art {
+  z-index: 3;
+}
+
+.royal-home .royal-hero-with-video .royal-hero-arrow,
+.royal-home .royal-hero-with-video .royal-hero-dots {
+  z-index: 5;
+}
+
+.royal-home .royal-hero-with-video .royal-hero-dots {
+  bottom: 16px;
+}
+
+.royal-home .royal-hero-with-video .royal-hero-mark {
+  bottom: 16px;
+  right: 24px;
+}
+
+@media (max-width: 900px) {
+  .royal-home .royal-hero.royal-hero-with-video {
+    height: 490px;
+  }
+  .royal-home .royal-hero-with-video .royal-hero-content h1 {
+    max-width: 620px;
+    font-size: clamp(37px, 5.6vw, 56px);
+  }
+}
+
+@media (max-width: 768px) {
+  .royal-home .royal-hero.royal-hero-with-video {
+    height: auto;
+    min-height: 485px;
+    padding: 58px 0 68px;
+  }
+
+  .royal-home .royal-hero-with-video .royal-hero-content {
+    width: calc(100% - 52px);
+    min-height: 345px;
+    height: auto;
+    padding: 6px 0 16px;
+  }
+
+  .royal-home .royal-hero-with-video .royal-hero-content h1 {
+    max-width: 520px;
+    font-size: clamp(35px, 8vw, 52px);
+  }
+
+  .royal-home .royal-hero-with-video .royal-hero-eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .royal-home .royal-hero-with-video .royal-hero-lede {
+    margin-top: 15px;
+    max-width: 460px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .royal-home .royal-hero-with-video .royal-hero-actions {
+    margin-top: 22px;
+  }
+
+  .royal-home .royal-hero-with-video .royal-hero-mark {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .royal-home .royal-hero.royal-hero-with-video {
+    min-height: 475px;
+    padding: 45px 0 64px;
+  }
+  .royal-home .royal-hero-with-video .royal-hero-content {
+    width: calc(100% - 64px);
+    min-height: 360px;
+  }
+  .royal-home .royal-hero-with-video .royal-hero-content h1 {
+    font-size: clamp(32px, 9.2vw, 43px);
+  }
+  .royal-home .royal-hero-with-video .royal-hero-actions {
+    gap: 9px;
+  }
+  .royal-home .royal-hero-with-video .royal-btn {
+    padding: 10px 12px;
+    min-height: 43px;
+    font-size: 12px;
+  }
+  .royal-home .royal-hero-with-video .royal-hero-arrow {
+    width: 31px;
+    height: 31px;
+  }
+}
